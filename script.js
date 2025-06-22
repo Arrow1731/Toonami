@@ -22,4 +22,4 @@ let currentIndex = 0;
 
 
 
-//   Cards ion homepage
+//   Cards homepage
