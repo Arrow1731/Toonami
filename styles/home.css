@@ -4,13 +4,24 @@
     box-sizing: border-box;
 }
 
-body {
-    background: #0e1a2e;
+html{
+    scroll-behavior: smooth;
 }
 
-nav{
-    position: relative;
+.container {
+    max-width: 1450px;
+    margin: 0 auto;
+    width: 100%;
 }
+
+body {
+    background: #0e1a2e;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* nav {
+    position: relative;
+} */
 
 .nav_list {
     /* background: #000; */
@@ -18,7 +29,7 @@ nav{
     width: 100%;
     height: 70px;
     padding: 15px 16px;
-    position: fixed;
+    /* position: fixed; */
 }
 
 .nav_items {
@@ -138,25 +149,6 @@ nav{
 
 .carousel-button.next {
     right: 20px;
-}
-
-@media (max-width: 768px) {
-    .carousel-container {
-        height: 350px;
-    }
-
-    .carousel-slide {
-        height: 350px;
-        padding-left: 20px;
-    }
-
-    .carousel-content h2 {
-        font-size: 24px;
-    }
-
-    .carousel-content p {
-        font-size: 16px;
-    }
 }
 
 
@@ -376,4 +368,258 @@ section {
     border-top: 1px solid #eee;
     font-size: 14px;
     color: #555;
+}
+
+
+/* Janrs */
+
+.janrs_anime {
+    .janrs_cards {
+        /* display: flex; */
+        /* justify-content: space-between; */
+
+        .janrs_card_anime,
+        .janrs_card_anime_nd {
+            display: flex;
+            gap: 12px;
+        }
+
+        .janr_card {
+            width: 370px;
+            height: 90px;
+            background: #000;
+            border-radius: 25px;
+        }
+    }
+}
+
+
+
+/* FOOTER */
+
+/* Footer Styles */
+.footer {
+    background-color: #111;
+    color: #ccc;
+    padding: 30px 0 15px;
+    font-family: sans-serif;
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    margin-bottom: 10px;
+}
+
+.footer-nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+    color: #fff;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.footer-social a {
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   ✅ FULL RESPONSIVE CSS BLOCK
+   =============================== */
+
+
+@media (max-width: 768px) {
+    .carousel-container {
+        height: 350px;
+    }
+
+    .carousel-slide {
+        height: 350px;
+        padding-left: 20px;
+    }
+
+    .carousel-content h2 {
+        font-size: 24px;
+    }
+
+    .carousel-content p {
+        font-size: 16px;
+    }
+}
+
+/* === Responsive Navbar === */
+@media (max-width: 768px) {
+    .nav_items {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav_items ul input {
+        width: 90%;
+    }
+
+    .nav_items img {
+        width: 180px;
+        margin-top: 0;
+    }
+}
+
+/* === Responsive Carousel === */
+@media (max-width: 768px) {
+    .carousel-container {
+        height: 350px;
+    }
+
+    .carousel-slide {
+        height: 350px;
+        padding-left: 20px;
+    }
+
+    .carousel-content {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .carousel-content h2 {
+        font-size: 24px;
+    }
+
+    .carousel-content p {
+        font-size: 16px;
+    }
+
+    .carousel-content a {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+/* === Responsive Cards (Relizlar & Tasodifiy) as Horizontal Slider === */
+@media (max-width: 768px) {
+    .anime-card {
+        overflow-x: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding: 10px 0;
+    }
+
+    .anime-card a {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        margin-right: 10px;
+        width: 150px;
+    }
+
+    .anime-image img {
+        width: 100%;
+    }
+
+    .anime-title {
+        font-size: 14px;
+    }
+}
+
+/* === Responsive Janr Cards === */
+@media (max-width: 768px) {
+
+    .janrs_card_anime,
+    .janrs_card_anime_nd {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .janr_card {
+        width: 90%;
+        height: 70px;
+    }
+}
+
+/* === Responsive Post Section (News) === */
+@media (max-width: 768px) {
+    .post {
+        margin: 20px 10px;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .profile-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .subscribe-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
 }
