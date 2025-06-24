@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -16,20 +16,18 @@ html{
 
 body {
     background: #0e1a2e;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: sans-serif;
 }
 
 /* nav {
     position: relative;
 } */
 
-.nav_list {
-    /* background: #000; */
+/* .nav_list {
     background-image: url(../Images/nav_bg.png);
     width: 100%;
     height: 70px;
     padding: 15px 16px;
-    /* position: fixed; */
 }
 
 .nav_items {
@@ -52,10 +50,75 @@ body {
 
         }
     }
+} */
+
+.nav_list {
+    background-image: url(../Images/nav_bg.png);
+    width: 100%;
+    height: 70px;
+    padding: 20px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.nav_items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav_items img {
+    width: 220px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    margin-top: -30px;
+}
+
+.nav_items ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav_items ul input {
+    width: 210px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding-left: 20px;
+    background: none;
+    color: white;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav_items img {
+        width: 150px;
+        margin-top: -10px;
+    }
+
+    .nav_items ul input {
+        width: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav_items img {
+        width: 130px;
+    }
+
+    .nav_items ul input {
+        width: 210px;
+        font-size: 13px;
+    }
 }
 
 
-/* CArausel */
+/* Carausel */
 
 .carousel-container {
     width: 100%;
@@ -198,6 +261,7 @@ section {
     /* purple */
     margin-right: 10px;
     border-radius: 50%;
+    font-weight: 700;
 }
 
 /* Cards */
@@ -477,7 +541,6 @@ section {
    ✅ FULL RESPONSIVE CSS BLOCK
    =============================== */
 
-
 @media (max-width: 768px) {
     .carousel-container {
         height: 350px;
@@ -497,25 +560,6 @@ section {
     }
 }
 
-/* === Responsive Navbar === */
-@media (max-width: 768px) {
-    .nav_items {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .nav_items ul input {
-        width: 90%;
-    }
-
-    .nav_items img {
-        width: 180px;
-        margin-top: 0;
-    }
-}
-
-/* === Responsive Carousel === */
 @media (max-width: 768px) {
     .carousel-container {
         height: 350px;
@@ -527,24 +571,30 @@ section {
     }
 
     .carousel-content {
-        padding: 20px;
         max-width: 90%;
+        padding: 10px;
+        margin: auto;
+        position: relative;
+        top: 100px;
     }
 
     .carousel-content h2 {
-        font-size: 24px;
+        font-size: 18px;  /* Smaller title on mobile */
     }
 
     .carousel-content p {
-        font-size: 16px;
+        font-size: 14px;  /* Smaller description on mobile */
     }
 
     .carousel-content a {
+        font-size: 13px;
+        padding: 6px 12px;
         width: 100%;
-        margin-left: 0;
         text-align: center;
+        margin-left: 0;
     }
 }
+
 
 /* === Responsive Cards (Relizlar & Tasodifiy) as Horizontal Slider === */
 @media (max-width: 768px) {
